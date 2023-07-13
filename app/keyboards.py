@@ -9,8 +9,11 @@ main_admin.add('Каталог').add('Корзина').add('Контакты').a
 admin_panel = ReplyKeyboardMarkup(resize_keyboard=True)
 admin_panel.add('Добавить товар').add('Удалить товар').add('Сделать рассылку')
 
-catalog_list = InlineKeyboardMarkup(row_width=2)
-catalog_list.add(InlineKeyboardButton(text='Орехи', url='https://youtube.com/@sudoteach'),
-                 InlineKeyboardButton(text='Сухофрукты', url='https://youtube.com/@sudoteach'),
-                 InlineKeyboardButton(text='Фрукты', url='https://youtube.com/@sudoteach'),
-                 InlineKeyboardButton(text='Овощи', url='https://youtube.com/@sudoteach'))
+catalog_list = InlineKeyboardMarkup(row_width=3)
+catalog_list.add(InlineKeyboardButton(text='Орехи', callback_data='t-orehi'),
+                 InlineKeyboardButton(text='Сухофрукты', callback_data='suhofruct'),
+                 InlineKeyboardButton(text='Фрукты', callback_data='fruct'),
+                 InlineKeyboardButton(text='Овощи', callback_data='ovohi'))
+
+cancel = ReplyKeyboardMarkup(resize_keyboard=True)
+cancel.add('Отмена')
